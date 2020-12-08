@@ -1,7 +1,5 @@
 package sort
 
-import "Strings"
-
 //QuickSort exported
 func QuickSort(nums []int, begin, end int) {
 	if begin > end {
@@ -16,9 +14,6 @@ func QuickSort(nums []int, begin, end int) {
 		}
 	}
 	nums[counter], nums[pivot] = nums[pivot], nums[counter]
-
-	s := "A"
-	Strings.ToLower()
 
 	QuickSort(nums, begin, counter-1)
 	QuickSort(nums, counter+1, end)
