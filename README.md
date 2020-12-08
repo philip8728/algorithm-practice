@@ -1,2 +1,3 @@
-# algorithm-practice
-algorithm-practice
+# 算法练习
+一些go语言算法练习，精选了leed-code中个人觉得不错的题解和覃超「算法训练营」中的例子
+有需要的同学可以自取
