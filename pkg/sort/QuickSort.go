@@ -1,6 +1,6 @@
 package sort
 
-//QuickSort exported
+/* //QuickSort exported
 func QuickSort(nums []int, begin, end int) {
 	if begin > end {
 		return
@@ -17,7 +17,7 @@ func QuickSort(nums []int, begin, end int) {
 
 	QuickSort(nums, begin, counter-1)
 	QuickSort(nums, counter+1, end)
-}
+} */
 
 /* func QuickSort(nums []int, start int, end int) {
 	//temirator
@@ -42,3 +42,21 @@ func QuickSort(nums []int, begin, end int) {
 	QuickSort(nums, counter+1, end)
 }
 */
+
+func QuickSort(nums []int, begin, end int) []int {
+	if begin > end {
+		return nil
+	}
+	counter := begin
+	pivot := end
+	for i := begin; i < end; i++ {
+		if nums[i] < nums[pivot] {
+			nums[counter], nums[i] = nums[i], nums[counter]
+			counter++
+		}
+	}
+	nums[counter], nums[pivot] = nums[pivot], nums[counter]
+	QuickSort(nums, begin, counter-1)
+	QuickSort(nums, counter+1, end)
+	return nums
+}
