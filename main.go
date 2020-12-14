@@ -1,18 +1,23 @@
 package main
 
+import (
+	"fmt"
+
+	_singleList "github.com/philip8728/algorithm-practice/pkg/linkedlist/singlelist"
+)
+
 /*
 local import path
 mod path github.com/philip8728/algorithm-practice/pkg
 */
 
-import (
-	"fmt"
-
-	_search "github.com/philip8728/algorithm-practice/pkg/search"
-)
-
 func main() {
-	a := []int{10, 5, 6, 7, 8}
-	target := 6
-	fmt.Println(_search.BinarySearch(a, 0, len(a)-1, target))
+	list := new(_singleList.ListNode)
+	list.AddSingleList(list, 1)
+	list.AddSingleList(list, 4)
+	list.AddSingleList(list, 3)
+	list.AddSingleList(list, 2)
+	list.AddSingleList(list, 5)
+	list.AddSingleList(list, 2)
+	fmt.Println(list)
 }
